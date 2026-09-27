@@ -1,0 +1,2709 @@
+# PROJECT: ثانوية عامة Study OS — Personal Study Management Website
+
+You are Claude Code acting as a senior full-stack engineer, product designer, UX designer, and software architect.
+
+I want you to BUILD a complete personal study-management web application for my Egyptian Thanaweya Amma (ثالثة ثانوية عامة) 2026/2027 study year.
+
+This is not a request for a mockup, wireframe, product description, or partial prototype.
+
+I want an actual working website with a polished UI, persistent data, configurable schedules, study tracking, Pomodoro functionality, revision management, analytics, and all other functionality described below.
+
+You should make sensible engineering decisions yourself, but DO NOT remove important functionality simply because it is complex. If a feature is difficult, implement a simpler working version first and structure the code so it can be expanded later.
+
+==================================================
+
+1. USER CONTEXT
+   ==================================================
+
+The application is being designed for one primary user.
+
+Student:
+
+* Egyptian high-school student
+* Grade: ثالثة ثانوية عامة
+* Track: علمي رياضة
+* Academic year: 2026/2027
+* Current curriculum completion: approximately 15–20%
+* Current level: roughly intermediate in all subjects
+* Target: approximately 85%+ overall, with the practical goal of qualifying for Computer Science in Cairo
+* Main subjects:
+
+  * Arabic
+  * Mathematics
+  * Chemistry
+  * Physics
+  * English
+
+English is currently low priority and should not consume significant study time unless explicitly enabled/configured by the user.
+
+Current study method:
+
+1. Watch lesson explanation.
+2. Watch solving/examples if necessary.
+3. Attempt questions independently.
+4. Take the teacher/course test when required.
+5. Move to the next lesson.
+
+Current problems:
+
+* Significant procrastination before starting.
+* Phone distraction.
+* Random unrelated thoughts.
+* Concentration drops after approximately 25–30 minutes.
+* Tendency to repeatedly check how much time remains in a video.
+* Sometimes spends too long on individual questions.
+* Currently does not have a stable study routine.
+* Wants a balanced and sustainable system rather than an extreme schedule.
+
+Desired sleep:
+
+* Approximately 11 PM–12 AM bedtime.
+* Approximately 9 hours of sleep.
+
+The student does NOT attend regular school currently and therefore has substantial flexibility.
+
+The student wants:
+
+* Studying to be the priority.
+* Free time after completing study goals.
+* Possible gym 3x/week.
+* Programming/personal projects.
+* Gaming/entertainment.
+* Flexible but structured days.
+* Tools that make studying easier rather than simply displaying a timetable.
+
+IMPORTANT:
+Do not hard-code any of these values into the application.
+
+Everything should be editable through Settings.
+
+==================================================
+2. CORE PRODUCT PHILOSOPHY
+==========================
+
+The website should NOT feel like a generic calendar.
+
+It should feel like a personal "Study Operating System".
+
+The application should answer:
+
+* What should I study today?
+* What should I study next?
+* How much have I completed?
+* Am I falling behind?
+* What should I revise?
+* Which subjects are receiving enough attention?
+* What mistakes am I repeatedly making?
+* How much focused work have I actually done?
+* How many questions am I solving?
+* How efficiently am I solving?
+* What do I need to catch up on?
+* What should I do when I miss a day?
+* When should I take breaks?
+* When can I relax without feeling guilty?
+
+The system should prioritize:
+
+1. Consistency
+2. Curriculum progress
+3. Active problem solving
+4. Revision
+5. Exam preparation
+6. Sustainable workload
+7. Sleep and recovery
+
+Avoid creating a system that rewards simply sitting at the computer for many hours.
+
+"Focused work completed" should be more important than "time spent with website open."
+
+==================================================
+3. TECH STACK
+=============
+
+Before coding:
+
+Inspect the existing repository.
+
+If the repository already has a stack, preserve it unless there is a compelling reason to change it.
+
+If starting from scratch, prefer:
+
+Frontend:
+
+* Next.js
+* TypeScript
+* React
+* Tailwind CSS
+* shadcn/ui or another clean component system
+
+Backend:
+
+* Next.js server actions/API routes OR a clean backend architecture appropriate to the repository.
+
+Database:
+
+* Prefer PostgreSQL for production.
+* Use Prisma ORM if appropriate.
+
+Authentication:
+
+* Build the application so authentication can be added easily.
+* For the first version, a local single-user mode is acceptable if authentication would unnecessarily delay development.
+* Structure the data layer so multi-user support can be introduced later.
+
+Charts:
+
+* Recharts or another lightweight React chart library.
+
+Icons:
+
+* Lucide React.
+
+Validation:
+
+* Zod.
+
+State:
+
+* Use a clean predictable state architecture.
+* Avoid unnecessary global state.
+
+Dates:
+
+* Use a proper date library such as date-fns.
+
+Notifications:
+
+* Browser notifications where supported.
+* Gracefully fall back if permission is denied.
+
+PWA:
+
+* Make the application installable as a PWA if practical.
+
+Responsive:
+
+* Desktop-first but fully usable on mobile.
+
+Do not introduce unnecessary dependencies.
+
+==================================================
+4. DESIGN LANGUAGE
+==================
+
+Design a modern premium productivity application.
+
+Visual inspiration:
+
+* Notion
+* Linear
+* Todoist
+* Apple Health
+* modern educational dashboards
+* modern SaaS applications
+
+Do NOT copy any proprietary design.
+
+Design characteristics:
+
+* Clean
+* Minimal
+* Spacious
+* Professional
+* Calm
+* Strong typography
+* Excellent information hierarchy
+* Subtle borders
+* Subtle shadows
+* Smooth animations
+* No excessive gradients
+* No visual clutter
+
+Default theme:
+
+* Dark mode OR system-aware theme, configurable by user.
+
+Allow:
+
+* Light
+* Dark
+* System
+
+Use a restrained color system.
+
+Subject colors should be configurable.
+
+Arabic UI should be supported.
+
+The application should support:
+
+* English
+* Arabic
+* RTL
+* LTR
+
+The primary interface may initially be English, but architecture must fully support Arabic RTL.
+
+==================================================
+5. GLOBAL NAVIGATION
+====================
+
+Create a persistent sidebar/navigation.
+
+Main sections:
+
+1. Dashboard
+2. Today
+3. Schedule
+4. Subjects
+5. Curriculum
+6. Study Sessions
+7. Pomodoro
+8. Tasks
+9. Revision
+10. Mistakes
+11. Exams
+12. Analytics
+13. Goals
+14. Calendar
+15. Settings
+
+On mobile:
+
+* Bottom navigation or responsive navigation drawer.
+
+Navigation should show useful badges:
+
+* overdue tasks
+* pending revision
+* today's remaining sessions
+* unfinished work
+
+==================================================
+6. DASHBOARD
+============
+
+The Dashboard should be the main command center.
+
+Top section:
+
+"Good morning / afternoon / evening"
+
+Display:
+
+* Current date
+* Day
+* Sleep status if entered
+* Today's completion percentage
+* Current study streak
+
+Main cards:
+
+A. TODAY'S PROGRESS
+
+Show:
+
+* Planned focused study
+* Completed focused study
+* Remaining focused study
+* Planned sessions
+* Completed sessions
+
+Example:
+
+Today
+4 / 5 study blocks
+4h 10m / 5h planned
+
+B. CURRICULUM PROGRESS
+
+Overall:
+15–20%
+
+Show each subject:
+
+* completion percentage
+* completed lessons
+* remaining lessons
+* current chapter
+
+C. SUBJECT BALANCE
+
+Show weekly focused study time by subject.
+
+D. NEXT STUDY SESSION
+
+Example:
+"Math — Differential Equations — Practice"
+
+Button:
+START SESSION
+
+E. REVISION DUE
+
+Show:
+
+* today's due revisions
+* overdue revisions
+* upcoming revisions
+
+F. MISTAKE REVIEW
+
+Show:
+
+* mistakes due for review
+* frequently repeated mistakes
+
+G. WEEKLY OVERVIEW
+
+Display:
+
+* focused hours
+* questions solved
+* lessons completed
+* tests completed
+* study days
+* missed planned blocks
+
+H. QUICK ACTIONS
+
+Buttons:
+
+* Start Pomodoro
+* Start Study Session
+* Add Task
+* Log Mistake
+* Add Question Set
+* Add Lesson
+* Add Exam
+* Edit Today's Plan
+
+==================================================
+7. TODAY PAGE
+=============
+
+Create a dedicated "Today" page.
+
+This is where the student spends most of their time.
+
+Display the day's schedule as a timeline.
+
+Example:
+
+09:00 Wake up
+10:00 Math — Lesson
+11:30 Break
+12:00 Math — Practice
+13:30 Lunch
+14:30 Physics — Lesson
+...
+
+Every block should have:
+
+* Subject
+* Activity type
+* Duration
+* Priority
+* Status
+* Start button
+* Skip button
+* Reschedule button
+* Edit button
+
+Statuses:
+
+* Upcoming
+* In progress
+* Completed
+* Skipped
+* Rescheduled
+* Overdue
+
+Allow drag-and-drop rescheduling.
+
+==================================================
+8. FLEXIBLE SCHEDULING SYSTEM
+=============================
+
+The schedule must NOT be hard-coded.
+
+Create a scheduling engine.
+
+The user should be able to define:
+
+Wake time
+Sleep time
+Preferred study start
+Preferred study end
+Meal times
+Break preferences
+Gym
+Free time
+Programming
+Personal commitments
+Days off
+
+Study preferences:
+
+* preferred session duration
+* preferred break duration
+* maximum daily focused hours
+* minimum daily focused hours
+* preferred subjects
+* subject priorities
+* number of study blocks per day
+* preferred study windows
+
+Example:
+
+Study block:
+90 minutes
+
+Internal Pomodoro:
+25 / 5 / 25 / 5 / 25
+
+Allow alternative:
+50 / 10
+
+Allow:
+Custom intervals.
+
+==================================================
+9. SCHEDULER / PLANNER
+======================
+
+Create a planner that automatically generates a suggested schedule.
+
+Inputs:
+
+* Subjects
+* Curriculum progress
+* Priority
+* Deadline
+* Weekly target
+* Current backlog
+* User availability
+* Sleep schedule
+* Existing events
+* Revision due
+* Upcoming exams
+* Preferred study blocks
+* Maximum daily study hours
+
+The scheduler should distribute work intelligently.
+
+Example:
+
+Math:
+5 sessions/week
+
+Physics:
+4 sessions/week
+
+Chemistry:
+4 sessions/week
+
+Arabic:
+3 sessions/week
+
+English:
+1 light session/week
+
+These are DEFAULT values only.
+
+Everything must be editable.
+
+The scheduler should avoid:
+
+* 4 difficult blocks back-to-back
+* excessive same-subject repetition
+* scheduling during sleep
+* scheduling during fixed events
+* overloading one day
+* ignoring overdue material
+
+When the user misses a session:
+DO NOT automatically create an enormous catch-up day.
+
+Instead:
+
+* Move it to the next suitable slot.
+* Prefer Friday/catch-up periods.
+* Spread backlog across multiple days.
+* Respect daily maximum workload.
+
+==================================================
+10. SUBJECT MANAGEMENT
+======================
+
+Subjects page.
+
+Each subject has:
+
+* Name
+* Icon
+* Color
+* Priority
+* Weekly target hours
+* Current completion %
+* Total chapters
+* Completed chapters
+* Current chapter
+* Difficulty
+* Importance
+* Enabled/disabled
+* Exam date
+* Notes
+
+Default subjects:
+
+Arabic
+Math
+Chemistry
+Physics
+English
+
+Allow:
+
+* Add subject
+* Delete subject
+* Archive subject
+* Rename subject
+* Change order
+* Change color
+* Change priority
+
+==================================================
+11. CURRICULUM SYSTEM
+=====================
+
+This is extremely important.
+
+Create a hierarchical curriculum:
+
+Subject
+→ Unit
+→ Chapter
+→ Lesson
+→ Topic
+
+Each lesson should have:
+
+* title
+* description
+* estimated duration
+* status
+* difficulty
+* teacher/course
+* video URL
+* notes
+* question sets
+* test
+* completion %
+* date started
+* date completed
+
+Statuses:
+
+Not Started
+Learning
+Practicing
+Needs Review
+Completed
+
+Allow users to manually add/edit the entire curriculum.
+
+DO NOT hard-code the Egyptian curriculum into the application.
+
+Provide import/export functionality.
+
+Support:
+
+* JSON
+* CSV if practical
+
+Example JSON:
+
+{
+"subject": "Physics",
+"units": [
+{
+"name": "Unit 1",
+"chapters": [...]
+}
+]
+}
+
+==================================================
+12. LESSON WORKFLOW
+===================
+
+Each lesson should support a workflow:
+
+1. Explanation
+2. Understanding check
+3. Worked examples
+4. Independent practice
+5. Test
+6. Completed
+7. Revision scheduled
+
+Lesson screen should have buttons:
+
+START EXPLANATION
+
+START PRACTICE
+
+START TEST
+
+MARK COMPLETE
+
+SCHEDULE REVISION
+
+ADD MISTAKE
+
+ADD NOTE
+
+The user should be able to record:
+
+* explanation time
+* practice time
+* questions attempted
+* questions correct
+* questions incorrect
+* test score
+
+==================================================
+13. STUDY SESSION TRACKING
+==========================
+
+Create a Study Session entity.
+
+Fields:
+
+* subject
+* lesson
+* activity
+* start time
+* end time
+* planned duration
+* actual duration
+* focused duration
+* interruptions
+* questions attempted
+* questions solved
+* confidence
+* notes
+
+Activity types:
+
+Explanation
+Practice
+Revision
+Exam
+Mistake Review
+Reading
+Memorization
+Other
+
+At the end of every session show:
+
+"How did this session go?"
+
+Optional:
+
+* Focus rating 1–5
+* Difficulty 1–5
+* Confidence 1–5
+* Questions solved
+* Notes
+
+==================================================
+14. POMODORO SYSTEM
+===================
+
+Build a polished Pomodoro timer.
+
+Default:
+
+25 minutes focus
+5 minutes break
+
+After 3 Pomodoros:
+15–30 minute long break.
+
+But EVERYTHING must be customizable.
+
+Settings:
+
+Focus duration
+Short break
+Long break
+Pomodoros before long break
+Auto-start next focus
+Auto-start breaks
+Sound
+Volume
+Notification
+Browser notification
+Fullscreen mode
+Show remaining time
+Hide remaining time
+Timer style
+
+Allow presets:
+
+Classic:
+25 / 5 / 15
+
+Deep:
+50 / 10 / 30
+
+Long:
+90 / 15
+
+Custom
+
+Timer states:
+
+Idle
+Focus
+Short Break
+Long Break
+Paused
+Completed
+
+When a Pomodoro finishes:
+
+* sound
+* browser notification
+* visual notification
+* log session
+
+The timer should continue accurately if the browser tab loses focus.
+
+Do not rely solely on setInterval countdown state.
+
+Use timestamps to calculate remaining time.
+
+==================================================
+15. ANTI-PROCRASTINATION MODE
+=============================
+
+Create a feature called:
+
+"Start Small"
+
+When the user is procrastinating, allow:
+
+5-minute starter session.
+
+UI:
+
+"Don't study for 5 hours.
+Just start for 5 minutes."
+
+Button:
+START 5 MINUTES
+
+After 5 minutes:
+
+* Continue
+* Stop
+
+If continued:
+convert into normal study session.
+
+Track how often this feature is used.
+
+Show:
+"Your average start delay has decreased by X."
+
+Do NOT make this manipulative or guilt-based.
+
+==================================================
+16. FOCUS MODE
+==============
+
+Create a distraction-free Focus Mode.
+
+When enabled:
+
+* Hide sidebar
+* Hide unrelated widgets
+* Fullscreen content
+* Timer centered
+* Current task visible
+* Progress visible
+* Minimal UI
+
+Optional:
+
+* hide timer
+* hide remaining time
+* show only current task
+
+Useful keyboard shortcuts:
+
+Space = pause/resume
+Esc = exit focus mode
+N = next task
+R = restart timer
+
+Allow shortcuts to be customized.
+
+==================================================
+17. PHONE DISTRACTION SYSTEM
+============================
+
+The application cannot physically control the phone.
+
+Do not pretend that it can.
+
+Instead provide:
+
+"Phone Away" mode.
+
+When starting a focus session:
+
+Show:
+
+PHONE AWAY
+
+"Put your phone somewhere outside reach."
+
+Optional:
+
+* fullscreen
+* browser notification
+* focus mode
+
+Allow user to manually log:
+"Checked phone"
+
+Track interruptions.
+
+==================================================
+18. THOUGHT PARKING
+===================
+
+Create a simple "Thought Parking" feature.
+
+When a random thought appears:
+
+User presses:
+
+Capture Thought
+
+Input:
+"What came to mind?"
+
+Save it.
+
+Do not interrupt the study session.
+
+After the session:
+
+Show parked thoughts.
+
+Actions:
+
+* Complete
+* Convert to task
+* Delete
+* Snooze
+
+This directly addresses random unrelated thoughts during studying.
+
+==================================================
+19. TASK MANAGEMENT
+===================
+
+Create a task system.
+
+Task fields:
+
+* title
+* description
+* subject
+* lesson
+* priority
+* estimated time
+* due date
+* recurring
+* status
+* tags
+
+Statuses:
+
+Inbox
+Today
+Scheduled
+In Progress
+Completed
+Archived
+
+Priority:
+
+Low
+Normal
+High
+Critical
+
+Allow:
+
+* recurring tasks
+* subtasks
+* notes
+* attachments if practical
+
+Examples:
+
+"Finish Physics problem set"
+"Review Chemistry chapter"
+"Take teacher test"
+"Review mistakes"
+
+==================================================
+20. REVISION ENGINE
+===================
+
+Build a revision system.
+
+When a lesson is completed, allow the user to schedule revision.
+
+Default suggested intervals:
+
+1 day
+3 days
+7 days
+14 days
+30 days
+
+But these must be editable.
+
+Do NOT call this medically/scientifically proven spacing unless sourced.
+
+Treat these as configurable defaults.
+
+Revision types:
+
+Quick Recall
+Questions
+Full Lesson
+Formula Review
+Mistake Review
+Mini Test
+
+Each revision should have:
+
+* scheduled date
+* subject
+* lesson
+* type
+* duration
+* result
+
+After revision:
+Ask:
+
+How well did you remember it?
+
+1 = Forgot
+2 = Weak
+3 = Okay
+4 = Good
+5 = Excellent
+
+Allow the system to suggest the next revision date based on this rating.
+
+Make the algorithm configurable.
+
+==================================================
+21. MISTAKE NOTEBOOK
+====================
+
+Create a dedicated mistake management system.
+
+Each mistake:
+
+* subject
+* lesson
+* question
+* source
+* mistake type
+* explanation
+* correct method
+* date
+* review history
+* severity
+* tags
+
+Mistake types:
+
+Conceptual
+Calculation
+Careless
+Misread Question
+Forgot Formula
+Wrong Method
+Time Management
+Other
+
+Allow:
+
+* screenshot/image attachment if practical
+* text
+* LaTeX math
+* tags
+
+Important:
+
+The system should identify recurring mistake categories.
+
+Example:
+
+"Calculation mistakes: 12"
+"Forgot formulas: 7"
+
+Do not claim psychological conclusions.
+
+Just show the data.
+
+==================================================
+22. QUESTION TRACKING
+=====================
+
+Create Question Sets.
+
+Fields:
+
+* title
+* subject
+* lesson
+* source
+* total questions
+* attempted
+* correct
+* wrong
+* skipped
+* average time/question
+* date
+
+Automatically calculate:
+
+Accuracy %
+Average time/question
+
+Example:
+
+30 questions
+24 correct
+6 incorrect
+
+Accuracy:
+80%
+
+If the user enters total time:
+Average time/question =
+total time / attempted questions
+
+Display the calculation clearly.
+
+==================================================
+23. EXAM SYSTEM
+===============
+
+Create exams.
+
+Exam fields:
+
+* name
+* subject
+* date
+* duration
+* total marks
+* achieved marks
+* percentage
+* questions
+* source
+* notes
+
+Exam modes:
+
+Practice
+Timed
+Full Exam
+
+During timed exam:
+
+* countdown
+* pause restrictions configurable
+* question navigation
+* mark for review
+* answer tracking
+* submit
+
+After submission:
+
+Show:
+
+* score
+* percentage
+* time used
+* average time/question
+* question accuracy
+* mistakes
+
+Do not rank the student against other users.
+
+==================================================
+24. ANALYTICS
+=============
+
+Create a powerful analytics dashboard.
+
+Metrics:
+
+Study:
+
+* focused hours
+* total study hours
+* sessions
+* average session
+* streak
+* study days
+
+Academic:
+
+* curriculum completion
+* lessons completed
+* questions solved
+* accuracy
+* exams
+* average scores
+* revision completion
+
+Subject analytics:
+
+* hours per subject
+* completion per subject
+* questions per subject
+* accuracy per subject
+
+Behavior:
+
+* planned vs completed
+* average start delay
+* skipped sessions
+* rescheduled sessions
+* interruptions
+
+Focus:
+
+* Pomodoros completed
+* average focus duration
+* interruption count
+
+IMPORTANT:
+
+Do not create arbitrary "productivity scores" unless the formula is transparent.
+
+If creating a score:
+
+* show exact formula
+* allow disabling it
+* never present it as an objective measure of academic ability.
+
+Charts:
+
+* weekly study hours
+* monthly study hours
+* subject distribution
+* curriculum progress
+* question accuracy
+* revision completion
+* planned vs actual
+
+Allow:
+7 days
+30 days
+90 days
+Custom range
+
+==================================================
+25. GOALS
+=========
+
+Create goal management.
+
+Goal types:
+
+Academic
+Study Hours
+Questions
+Lessons
+Exams
+Habits
+
+Examples:
+
+"Complete Unit 2 by October 15"
+
+Goal fields:
+
+* name
+* type
+* target
+* current
+* deadline
+* subject
+* notes
+
+Progress bars.
+
+Allow milestones.
+
+==================================================
+26. YEAR ROADMAP
+================
+
+Create a Year Roadmap page.
+
+Show:
+
+September
+October
+November
+December
+January
+February
+March
+April
+May
+June
+July
+
+The exact exam date MUST NOT be hard-coded unless confirmed by an official source and made editable.
+
+Allow the user to define:
+
+* curriculum completion target
+* revision 1
+* revision 2
+* exam practice
+* final revision
+
+Example phases:
+
+PHASE 1
+Curriculum Completion
+
+PHASE 2
+First Revision
+
+PHASE 3
+Second Revision
+
+PHASE 4
+Full Exam Practice
+
+PHASE 5
+Final Revision
+
+All dates editable.
+
+==================================================
+27. CALENDAR
+============
+
+Create calendar views:
+
+Month
+Week
+Day
+
+Display:
+
+* study blocks
+* revisions
+* exams
+* tasks
+* gym
+* personal events
+* free time
+
+Allow drag-and-drop.
+
+Different event types should have distinct visual indicators.
+
+==================================================
+28. FREE TIME SYSTEM
+====================
+
+Free time should be treated as a legitimate part of the schedule.
+
+Allow:
+
+Gym
+Programming
+Gaming
+Entertainment
+Friends
+Family
+Other
+
+User can define preferred free-time activities.
+
+After daily study target is completed:
+
+Show:
+
+"Today's study target completed."
+
+Then:
+
+"Your evening is free."
+
+This should be encouraging, not guilt-based.
+
+==================================================
+29. GYM TRACKING
+================
+
+Optional feature.
+
+Allow user to create recurring gym events.
+
+Example:
+Monday
+Wednesday
+Saturday
+
+60–90 minutes.
+
+The system should treat gym as an ordinary calendar commitment.
+
+Do not give medical or fitness advice.
+
+==================================================
+30. SLEEP TRACKING
+==================
+
+Simple sleep tracker.
+
+Fields:
+
+* bedtime
+* wake time
+* duration
+* sleep quality
+
+Show:
+
+* average sleep duration
+* consistency
+
+Do not make medical claims.
+
+Allow target sleep duration.
+
+Example:
+9 hours
+
+The target is configurable.
+
+==================================================
+31. DAILY REVIEW
+================
+
+At the end of the day:
+
+Show:
+
+Today's Summary
+
+Study:
+X planned
+Y completed
+
+Questions:
+X attempted
+Y correct
+
+Lessons:
+X completed
+
+Revisions:
+X completed
+
+Interruptions:
+X
+
+Then ask:
+
+1. What went well?
+2. What should change tomorrow?
+3. Any unfinished work?
+
+Keep this optional.
+
+Do not make the user fill out a huge form every night.
+
+==================================================
+32. WEEKLY REVIEW
+=================
+
+Every week provide:
+
+Weekly Review
+
+Show:
+
+* total focused hours
+* study days
+* subject distribution
+* lessons completed
+* questions solved
+* accuracy
+* exams
+* revisions
+* missed sessions
+* catch-up work
+
+Ask:
+
+* What went well?
+* Biggest obstacle?
+* What should change?
+* Which subject needs more attention?
+
+Allow generating next week's suggested plan.
+
+==================================================
+33. SMART BACKLOG / CATCH-UP
+============================
+
+This is very important.
+
+If the user misses a session:
+
+DO NOT simply push everything forward.
+
+Create backlog items.
+
+Each backlog item has:
+
+* importance
+* estimated duration
+* deadline
+* subject
+
+The scheduler distributes backlog intelligently.
+
+Rules:
+
+1. Respect maximum daily workload.
+2. Prefer catch-up blocks.
+3. Do not eliminate all free time.
+4. Avoid scheduling excessive difficult subjects consecutively.
+5. Prioritize overdue/high-priority tasks.
+6. Spread backlog across several days if necessary.
+7. Tell the user when the backlog is too large to fit within current settings.
+
+Example:
+
+"You have 6h 30m of unfinished work.
+Your current schedule can absorb approximately 4h this week.
+You may need to adjust deadlines or workload."
+
+Do not silently overload the user.
+
+==================================================
+34. ADAPTIVE WORKLOAD
+=====================
+
+The system should learn from actual behavior.
+
+If user repeatedly plans:
+
+6 hours/day
+
+but completes:
+
+4.5 hours/day
+
+show:
+
+"Your recent average is 4h 30m/day."
+
+Offer:
+
+"Adjust your default daily target?"
+
+Buttons:
+
+* Keep 6h
+* Adjust to 4h 30m
+* Custom
+
+Never automatically reduce goals without permission.
+
+==================================================
+35. CUSTOMIZABILITY
+===================
+
+Almost everything must be editable.
+
+Settings categories:
+
+GENERAL
+
+* Name
+* Language
+* Theme
+* Start of week
+* Time format
+* Date format
+
+STUDY
+
+* Default study block
+* Break duration
+* Daily target
+* Minimum target
+* Maximum target
+* Study days
+* Rest day
+* Preferred study hours
+
+POMODORO
+
+* Focus
+* Short break
+* Long break
+* Cycles
+* Sounds
+* Notifications
+
+SCHEDULER
+
+* Subject weights
+* Distribution
+* Backlog rules
+* Catch-up day
+* Maximum daily load
+
+REVISION
+
+* intervals
+* difficulty behavior
+* reminder settings
+
+NOTIFICATIONS
+
+* browser notifications
+* sound
+* reminders
+
+DISPLAY
+
+* density
+* animations
+* sidebar
+* compact mode
+
+==================================================
+36. IMPORT / EXPORT
+===================
+
+Allow exporting all data.
+
+Formats:
+
+JSON mandatory.
+
+CSV where useful.
+
+Data should include:
+
+subjects
+curriculum
+lessons
+sessions
+tasks
+revisions
+mistakes
+questions
+exams
+goals
+settings
+events
+
+Allow backup download.
+
+Allow import.
+
+Validate imported files.
+
+Do not overwrite existing data without confirmation.
+
+==================================================
+37. DATA MODEL
+==============
+
+Design a normalized database.
+
+Likely entities:
+
+User
+Subject
+CurriculumUnit
+Chapter
+Lesson
+StudySession
+ScheduleBlock
+Task
+Revision
+Mistake
+QuestionSet
+Exam
+Goal
+CalendarEvent
+PomodoroSession
+Thought
+SleepEntry
+WeeklyReview
+DailyReview
+Settings
+
+Relationships should be clean.
+
+Use IDs, timestamps, createdAt, updatedAt.
+
+Use soft deletion where appropriate.
+
+==================================================
+38. OFFLINE SUPPORT
+===================
+
+The application should remain usable if internet connection temporarily disappears.
+
+At minimum:
+
+* timer works offline
+* today's schedule remains visible
+* locally entered sessions should queue for sync if backend architecture supports it
+
+If full offline sync is too complex for initial implementation:
+
+Implement local persistence for timer/settings/current day.
+
+Do not make fake claims about offline support.
+
+==================================================
+39. ACCESSIBILITY
+=================
+
+Implement:
+
+* keyboard navigation
+* focus states
+* semantic HTML
+* accessible labels
+* sufficient contrast
+* reduced motion option
+* screen-reader friendly controls
+
+Do not make color the only way to communicate status.
+
+==================================================
+40. RESPONSIVENESS
+==================
+
+Desktop:
+full sidebar + dashboard.
+
+Tablet:
+collapsible sidebar.
+
+Mobile:
+bottom navigation / drawer.
+
+Timer must work especially well on mobile.
+
+==================================================
+41. NOTIFICATION SYSTEM
+=======================
+
+Support:
+
+* Study session reminder
+* Revision due
+* Exam reminder
+* Task due
+* Sleep reminder
+* Daily study reminder
+
+Every notification category must be individually configurable.
+
+Never spam the user.
+
+Allow:
+
+* off
+* once
+* configurable
+
+==================================================
+42. SEARCH
+==========
+
+Global search.
+
+Search across:
+
+* subjects
+* lessons
+* tasks
+* mistakes
+* revisions
+* exams
+* notes
+
+Keyboard shortcut:
+Ctrl/Cmd + K
+
+==================================================
+43. COMMAND PALETTE
+===================
+
+Implement a command palette.
+
+Example commands:
+
+Start Pomodoro
+Start Study Session
+Add Task
+Add Mistake
+Add Revision
+Open Dashboard
+Open Calendar
+Open Analytics
+Add Thought
+Toggle Focus Mode
+
+==================================================
+44. KEYBOARD SHORTCUTS
+======================
+
+Support:
+
+Ctrl/Cmd + K
+Space
+Esc
+N
+R
+T
+
+Make shortcuts configurable.
+
+==================================================
+45. DATA SAFETY
+===============
+
+Never silently delete data.
+
+For destructive actions:
+
+Require confirmation.
+
+Provide undo where practical.
+
+Autosave forms where practical.
+
+==================================================
+46. PERFORMANCE
+===============
+
+The website should feel fast.
+
+Avoid:
+
+* huge client bundles
+* unnecessary rerenders
+* expensive animations
+* unnecessary polling
+
+Use lazy loading where useful.
+
+The Pomodoro timer must remain accurate.
+
+Charts should not render excessively large datasets unnecessarily.
+
+==================================================
+47. ERROR HANDLING
+==================
+
+Create proper error states.
+
+Examples:
+
+No curriculum:
+"Add your first subject."
+
+No study sessions:
+"No sessions recorded yet."
+
+Database unavailable:
+"Your data could not be saved."
+
+Never silently fail.
+
+Use toast notifications for successful actions/errors.
+
+==================================================
+48. EMPTY STATES
+================
+
+Every page needs a useful empty state.
+
+Examples:
+
+"No revisions due today."
+
+"No mistakes recorded."
+
+"No exams yet."
+
+"No tasks today."
+
+Give a relevant action button.
+
+==================================================
+49. DEMO / INITIAL DATA
+=======================
+
+Create an optional demo dataset.
+
+If enabled:
+
+Subjects:
+Math
+Physics
+Chemistry
+Arabic
+English
+
+Create sample lessons and sessions.
+
+Clearly label demo data.
+
+Do not confuse demo data with real student progress.
+
+==================================================
+50. ONBOARDING
+==============
+
+First launch should show a setup wizard.
+
+Step 1:
+Welcome
+
+Step 2:
+Academic year
+
+Step 3:
+Track
+
+Step 4:
+Subjects
+
+Step 5:
+Current progress
+
+Step 6:
+Sleep schedule
+
+Step 7:
+Study availability
+
+Step 8:
+Preferred Pomodoro
+
+Step 9:
+Weekly subject targets
+
+Step 10:
+Goal
+
+Step 11:
+Generate first schedule
+
+At the end:
+
+"Your first week is ready."
+
+Allow skipping onboarding.
+
+Everything can be edited later.
+
+==================================================
+51. FIRST WEEK GENERATOR
+========================
+
+After onboarding:
+
+Generate a realistic first week.
+
+Do not immediately schedule maximum workload.
+
+Because the user is currently inconsistent, start conservatively.
+
+Default:
+
+3–4 study blocks/day.
+
+Increase gradually based on actual completion.
+
+Make this behavior configurable.
+
+==================================================
+52. STUDY SESSION START SCREEN
+==============================
+
+Before starting:
+
+Subject
+Lesson
+Activity
+Planned duration
+Pomodoro preset
+
+Buttons:
+
+START
+
+Optional:
+
+Phone Away Mode
+Focus Mode
+
+Once started:
+show timer.
+
+At completion:
+ask for results.
+
+==================================================
+53. SESSION COMPLETION SCREEN
+=============================
+
+Example:
+
+Math — Integration Practice
+
+Planned:
+90 min
+
+Focused:
+72 min
+
+Questions:
+18
+
+Correct:
+14
+
+Accuracy:
+77.8%
+
+Focus:
+4/5
+
+Notes:
+...
+
+Buttons:
+
+SAVE SESSION
+
+ADD MISTAKE
+
+SCHEDULE REVISION
+
+NEXT SESSION
+
+DONE
+
+==================================================
+54. DAILY PRIORITY SYSTEM
+=========================
+
+The Today page should calculate:
+
+Must Do
+Should Do
+Optional
+
+Example:
+
+MUST DO
+Physics test
+
+SHOULD DO
+Math practice
+
+OPTIONAL
+Arabic revision
+
+The user can manually override priority.
+
+==================================================
+55. STUDY LOAD INDICATOR
+========================
+
+Show:
+
+Today's workload:
+
+Light
+Normal
+Heavy
+Overloaded
+
+Based on transparent configurable rules.
+
+Example:
+
+0–3 hours = Light
+3–5 = Normal
+5–7 = Heavy
+7+ = Overloaded
+
+But make thresholds configurable.
+
+Do not claim that these values are objectively optimal.
+
+==================================================
+56. NO GUILT DESIGN
+===================
+
+The UI must NOT use shame.
+
+Avoid:
+
+"You failed."
+
+"You wasted your day."
+
+"You're behind because you were lazy."
+
+Use:
+
+"2 sessions remain."
+
+"You have unfinished work."
+
+"Would you like to reschedule?"
+
+The purpose is to help the student recover.
+
+==================================================
+57. SECURITY
+============
+
+If authentication is implemented:
+
+* hash passwords securely
+* protect API routes
+* validate inputs
+* prevent unauthorized access
+* sanitize user content
+* use environment variables for secrets
+
+Never commit secrets.
+
+Create .env.example.
+
+==================================================
+58. TESTING
+===========
+
+Implement tests for:
+
+* scheduler
+* revision calculations
+* Pomodoro timer logic
+* question accuracy
+* exam percentage
+* workload calculations
+* backlog distribution
+* date handling
+* import/export
+* settings
+
+Especially test date/time edge cases.
+
+==================================================
+59. DOCUMENTATION
+=================
+
+Create:
+
+README.md
+
+Include:
+
+* project overview
+* architecture
+* setup
+* environment variables
+* database setup
+* migrations
+* development commands
+* production build
+* deployment instructions
+* data model
+* scheduler logic
+* timer logic
+
+Also create:
+
+ARCHITECTURE.md
+
+DATABASE.md
+
+FEATURES.md
+
+==================================================
+60. DEVELOPMENT WORKFLOW
+========================
+
+Do not attempt to create everything in one enormous unstructured implementation.
+
+Use phases.
+
+PHASE 1:
+Project setup
+
+* inspect repository
+* establish stack
+* establish design system
+* database
+* routing
+* base layout
+
+PHASE 2:
+Core data
+
+* subjects
+* curriculum
+* lessons
+* settings
+
+PHASE 3:
+Dashboard
+
+* Today
+* schedule
+* study sessions
+
+PHASE 4:
+Pomodoro
+
+* timer
+* focus mode
+* session logging
+
+PHASE 5:
+Tasks
+
+* revisions
+* mistakes
+* thoughts
+
+PHASE 6:
+Questions
+
+* exams
+* analytics
+
+PHASE 7:
+Scheduler
+
+* adaptive workload
+* backlog
+* catch-up
+
+PHASE 8:
+Calendar
+
+* goals
+* sleep
+* gym
+
+PHASE 9:
+Import/export
+
+* backup
+* restore
+
+PHASE 10:
+Polish
+
+* responsive
+* accessibility
+* animations
+* empty states
+* error handling
+* performance
+
+PHASE 11:
+Testing
+
+PHASE 12:
+Documentation
+
+After every phase:
+
+* run lint
+* run type checking
+* run tests
+* fix errors
+* verify the application still runs
+
+==================================================
+61. IMPORTANT CODING RULES
+==========================
+
+Do NOT:
+
+* create fake buttons
+* create dead UI
+* hard-code data unnecessarily
+* use placeholder functionality when real functionality is expected
+* silently ignore errors
+* make settings that don't actually change behavior
+* create fake analytics
+* fabricate curriculum information
+* assume exam dates
+* fabricate government requirements
+* make medical claims
+* make unsupported claims about optimal study duration
+
+If something cannot be implemented yet:
+make the limitation explicit in the UI/code documentation.
+
+==================================================
+62. AI FEATURES — OPTIONAL
+==========================
+
+Do NOT make the application dependent on AI.
+
+If an AI integration is added later, structure it as an optional service.
+
+Possible future AI features:
+
+* Explain a mistake
+* Generate a study plan
+* Summarize notes
+* Generate practice questions
+* Analyze repeated mistakes
+* Suggest revision
+* Convert notes into flashcards
+
+But do NOT automatically send personal study data to an external AI provider.
+
+Require explicit user action.
+
+Keep the architecture provider-agnostic.
+
+==================================================
+63. FUTURE FEATURES TO ARCHITECT FOR
+====================================
+
+Do not necessarily implement these now, but avoid architectural decisions that make them impossible:
+
+* Multiple users
+* Parent dashboard
+* Teacher dashboard
+* Cloud sync
+* Mobile app
+* AI tutor
+* Flashcards
+* spaced repetition
+* study groups
+* accountability
+* integrations
+* Google Calendar integration
+* Apple Calendar integration
+* Discord notifications
+
+==================================================
+64. CRITICAL USER EXPERIENCE FLOW
+=================================
+
+The most important flow is:
+
+Open website
+
+↓
+
+Dashboard
+
+↓
+
+See today's plan
+
+↓
+
+Click "Start"
+
+↓
+
+Phone Away Mode
+
+↓
+
+Focus Mode
+
+↓
+
+Pomodoro
+
+↓
+
+Study
+
+↓
+
+Timer ends
+
+↓
+
+Log questions/results
+
+↓
+
+Record mistakes if needed
+
+↓
+
+Schedule revision
+
+↓
+
+Complete session
+
+↓
+
+Return to Today
+
+↓
+
+Next task
+
+This flow should require as few clicks as possible.
+
+==================================================
+65. SECONDARY FLOW
+==================
+
+User misses a session.
+
+↓
+
+System marks it incomplete.
+
+↓
+
+User opens Today.
+
+↓
+
+System shows:
+
+"You have unfinished work."
+
+↓
+
+Options:
+
+Reschedule
+Move to catch-up
+Skip
+Complete now
+
+↓
+
+Scheduler recalculates.
+
+Never automatically overload tomorrow.
+
+==================================================
+66. THIRD FLOW
+==============
+
+User finishes a lesson.
+
+↓
+
+Mark Complete.
+
+↓
+
+System asks:
+
+"Schedule revision?"
+
+↓
+
+Suggest:
+1 day
+3 days
+7 days
+14 days
+
+↓
+
+User chooses.
+
+↓
+
+Revision enters calendar.
+
+==================================================
+67. FOURTH FLOW
+===============
+
+User struggles with a question.
+
+↓
+
+Adds mistake.
+
+↓
+
+Mistake appears in Mistake Notebook.
+
+↓
+
+Revision reminder later.
+
+↓
+
+User reviews mistake.
+
+↓
+
+Marks:
+Forgot / Weak / Okay / Good / Excellent.
+
+↓
+
+Next review calculated.
+
+==================================================
+68. DASHBOARD DESIGN PRIORITY
+=============================
+
+The Dashboard should NOT overwhelm the student.
+
+Above the fold:
+
+1. Today's progress
+2. Current/next session
+3. Curriculum progress
+4. Revision due
+5. Quick Start
+
+Everything else can be lower on the page.
+
+==================================================
+69. SETTINGS MUST BE REAL
+=========================
+
+If the UI contains:
+
+"Daily target"
+
+changing it MUST change scheduling behavior.
+
+If the UI contains:
+
+"Pomodoro duration"
+
+changing it MUST change the timer.
+
+If the UI contains:
+
+"Subject priority"
+
+changing it MUST affect scheduler recommendations.
+
+Do not create cosmetic settings.
+
+==================================================
+70. FINAL ACCEPTANCE CRITERIA
+=============================
+
+The project is considered complete only when:
+
+[ ] App starts successfully
+[ ] Database works
+[ ] User can create subjects
+[ ] User can create curriculum
+[ ] User can create lessons
+[ ] User can create schedule
+[ ] User can start study sessions
+[ ] Study sessions are saved
+[ ] Pomodoro works
+[ ] Pomodoro remains accurate when tab loses focus
+[ ] Focus Mode works
+[ ] Tasks work
+[ ] Revision system works
+[ ] Mistake notebook works
+[ ] Question tracking works
+[ ] Exam tracking works
+[ ] Dashboard displays real data
+[ ] Analytics display real data
+[ ] Calendar works
+[ ] Goals work
+[ ] Sleep tracking works
+[ ] Gym events work
+[ ] Thought Parking works
+[ ] Backlog works
+[ ] Catch-up scheduling works
+[ ] Settings work
+[ ] Import/export works
+[ ] Responsive UI works
+[ ] Dark/light themes work
+[ ] RTL architecture exists
+[ ] Keyboard shortcuts work
+[ ] Search works
+[ ] Command palette works
+[ ] Empty states exist
+[ ] Error states exist
+[ ] Confirmation dialogs exist
+[ ] Tests exist
+[ ] Type checking passes
+[ ] Lint passes
+[ ] Production build passes
+[ ] Documentation exists
+
+==================================================
+71. IMPORTANT: HOW YOU SHOULD WORK
+==================================
+
+Start by inspecting the repository.
+
+Do not immediately write hundreds of files.
+
+First determine:
+
+* current project structure
+* existing framework
+* package manager
+* existing dependencies
+* existing UI system
+* existing database
+* existing routes
+* existing environment variables
+
+Then produce a short implementation plan based on what you actually find.
+
+After that, IMPLEMENT the application.
+
+Do not stop after creating the plan.
+
+Work incrementally.
+
+After each major implementation phase:
+
+1. Run type checking.
+2. Run linting.
+3. Run tests.
+4. Run/build the application.
+5. Fix errors.
+6. Inspect the UI.
+7. Continue.
+
+When something is ambiguous:
+
+* choose the simplest sensible implementation
+* make it configurable
+* document the decision
+* continue working
+
+Do not repeatedly ask me for confirmation for minor implementation decisions.
+
+Only ask me when a decision genuinely blocks implementation or requires information only I can provide.
+
+==================================================
+72. IMPORTANT: DO NOT OVERENGINEER
+==================================
+
+This is a personal study application.
+
+Do not build:
+
+* unnecessary microservices
+* complicated event-driven architecture
+* unnecessary abstractions
+* dozens of dependencies
+* enterprise infrastructure
+
+Prefer:
+
+simple
+maintainable
+modular
+well-tested
+fast
+
+==================================================
+73. FINAL UI QUALITY BAR
+========================
+
+Before declaring completion, inspect every page.
+
+Check:
+
+* alignment
+* spacing
+* typography
+* responsive behavior
+* loading states
+* empty states
+* hover states
+* focus states
+* error states
+* mobile behavior
+* keyboard navigation
+* dark mode
+* light mode
+* RTL compatibility
+
+The application should look like a finished commercial productivity application, not a coding exercise.
+
+==================================================
+74. START NOW
+=============
+
+Begin by inspecting the repository and determining the existing technology stack.
+
+Then:
+
+1. Give me a concise implementation plan.
+2. Start Phase 1 immediately.
+3. Continue through the phases without stopping after planning.
+4. Keep the code modular.
+5. Test continuously.
+6. Do not fabricate data.
+7. Do not hard-code curriculum or exam information.
+8. Make user preferences configurable.
+9. Prioritize the Today → Start Session → Focus → Complete → Review workflow.
+10. Finish with a working application, not just documentation.
+
+BUILD IT.

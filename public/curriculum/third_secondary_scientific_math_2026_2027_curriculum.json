@@ -1,0 +1,1633 @@
+{
+  "schemaVersion": "1.0",
+  "academicYear": "2026/2027",
+  "grade": "Third Secondary",
+  "track": "Scientific Mathematics",
+  "language": "English",
+  "curriculumStatus": "working_import_dataset",
+  "notes": [
+    "Subject/branch structure is aligned with the Egyptian Ministry of Education's Third Secondary Scientific Mathematics structure.",
+    "Individual lesson names are a practical import hierarchy and should remain editable in the app.",
+    "Arabic follows the table of contents (الفهرس) of the Third Secondary Arabic book. English is kept at a broader hierarchy because exact textbook lesson names could not be verified."
+  ],
+  "subjects": [
+    {
+      "id": "arabic",
+      "name": "Arabic Language",
+      "nameAr": "اللغة العربية",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "arabic-grammar",
+          "name": "النحو",
+          "nameAr": "النحو",
+          "units": [
+            {
+              "id": "arabic-grammar-u1",
+              "name": "الوحدة الأولى: النطق والإملاء",
+              "lessons": [
+                {
+                  "id": "arabic-g1-01",
+                  "name": "همزة القطع وألف الوصل"
+                },
+                {
+                  "id": "arabic-g1-02",
+                  "name": "الهمزة المتوسطة"
+                },
+                {
+                  "id": "arabic-g1-03",
+                  "name": "الهمزة المتطرفة"
+                },
+                {
+                  "id": "arabic-g1-04",
+                  "name": "الفرق بين (ألا) و (إلا)"
+                },
+                {
+                  "id": "arabic-g1-05",
+                  "name": "أنواع الواو"
+                },
+                {
+                  "id": "arabic-g1-06",
+                  "name": "الفرق بين (ثُمَّ – ثُمَّت) و (ثَمَّ – ثَمَّة)"
+                },
+                {
+                  "id": "arabic-g1-07",
+                  "name": "الفرق بين التاء المربوطة والهاء المربوطة"
+                },
+                {
+                  "id": "arabic-g1-08",
+                  "name": "(ال) الشمسية و(ال) القمرية"
+                }
+              ]
+            },
+            {
+              "id": "arabic-grammar-u2",
+              "name": "الوحدة الثانية: الأبنية",
+              "lessons": [
+                {
+                  "id": "arabic-g2-01",
+                  "name": "اسم الفاعل"
+                },
+                {
+                  "id": "arabic-g2-02",
+                  "name": "صيغة المبالغة"
+                },
+                {
+                  "id": "arabic-g2-03",
+                  "name": "اسم المفعول"
+                },
+                {
+                  "id": "arabic-g2-04",
+                  "name": "أسلوب التفضيل"
+                },
+                {
+                  "id": "arabic-g2-05",
+                  "name": "اسم الآلة"
+                },
+                {
+                  "id": "arabic-g2-06",
+                  "name": "اسما الزمان والمكان"
+                },
+                {
+                  "id": "arabic-g2-07",
+                  "name": "المصدر الصريح"
+                },
+                {
+                  "id": "arabic-g2-08",
+                  "name": "المصدر المؤول"
+                },
+                {
+                  "id": "arabic-g2-09",
+                  "name": "المصدر الميمي"
+                },
+                {
+                  "id": "arabic-g2-10",
+                  "name": "المصدر الصناعي"
+                },
+                {
+                  "id": "arabic-g2-11",
+                  "name": "اسم المرة"
+                },
+                {
+                  "id": "arabic-g2-12",
+                  "name": "اسم الهيئة"
+                },
+                {
+                  "id": "arabic-g2-13",
+                  "name": "الاسم المقصور"
+                },
+                {
+                  "id": "arabic-g2-14",
+                  "name": "الاسم المنقوص"
+                },
+                {
+                  "id": "arabic-g2-15",
+                  "name": "الاسم الممدود"
+                },
+                {
+                  "id": "arabic-g2-16",
+                  "name": "الأفعال الملازمة للبناء للمجهول"
+                }
+              ]
+            },
+            {
+              "id": "arabic-grammar-u3",
+              "name": "الوحدة الثالثة: الجملة الاسمية والنواسخ",
+              "lessons": [
+                {
+                  "id": "arabic-g3-01",
+                  "name": "المبتدأ والخبر"
+                },
+                {
+                  "id": "arabic-g3-02",
+                  "name": "كان وأخواتها"
+                },
+                {
+                  "id": "arabic-g3-03",
+                  "name": "كاد وأخواتها"
+                },
+                {
+                  "id": "arabic-g3-04",
+                  "name": "إن وأخواتها"
+                },
+                {
+                  "id": "arabic-g3-05",
+                  "name": "لا النافية للجنس"
+                },
+                {
+                  "id": "arabic-g3-06",
+                  "name": "المحل الإعرابي للجمل"
+                },
+                {
+                  "id": "arabic-g3-07",
+                  "name": "الضمائر"
+                }
+              ]
+            },
+            {
+              "id": "arabic-grammar-u4",
+              "name": "الوحدة الرابعة: في إعراب الاسم",
+              "lessons": [
+                {
+                  "id": "arabic-g4-01",
+                  "name": "المفعول به"
+                },
+                {
+                  "id": "arabic-g4-02",
+                  "name": "المفعول فيه (ظرف الزمان والمكان)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arabic-rhetoric",
+          "name": "البلاغة",
+          "nameAr": "البلاغة",
+          "units": [
+            {
+              "id": "arabic-rhetoric-u1",
+              "name": "البلاغة",
+              "lessons": [
+                {
+                  "id": "arabic-r-01",
+                  "name": "الألوان البيانية"
+                },
+                {
+                  "id": "arabic-r-02",
+                  "name": "علم البديع"
+                },
+                {
+                  "id": "arabic-r-03",
+                  "name": "علم المعاني"
+                },
+                {
+                  "id": "arabic-r-04",
+                  "name": "التجربة الشعرية"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arabic-literature",
+          "name": "الأدب",
+          "nameAr": "الأدب",
+          "units": [
+            {
+              "id": "arabic-literature-u1",
+              "name": "الأدب",
+              "lessons": [
+                {
+                  "id": "arabic-l-01",
+                  "name": "مدرسة الإحياء والبعث (الكلاسيكية)"
+                },
+                {
+                  "id": "arabic-l-02",
+                  "name": "الاتجاه الوجداني"
+                },
+                {
+                  "id": "arabic-l-03",
+                  "name": "مدرسة الديوان"
+                },
+                {
+                  "id": "arabic-l-04",
+                  "name": "مدرسة أبولو"
+                },
+                {
+                  "id": "arabic-l-05",
+                  "name": "المقال"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arabic-texts",
+          "name": "النصوص",
+          "nameAr": "النصوص",
+          "units": [
+            {
+              "id": "arabic-texts-u1",
+              "name": "النصوص",
+              "lessons": [
+                {
+                  "id": "arabic-t-01",
+                  "name": "كيف تجيب عن أسئلة النصوص الشعرية؟"
+                },
+                {
+                  "id": "arabic-t-02",
+                  "name": "كيف تجيب عن أسئلة النصوص النثرية؟"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arabic-reading",
+          "name": "القراءة",
+          "nameAr": "القراءة",
+          "units": [
+            {
+              "id": "arabic-reading-u1",
+              "name": "القراءة",
+              "lessons": [
+                {
+                  "id": "arabic-rd-01",
+                  "name": "كيف تجيب عن أسئلة القراءة المتحررة؟"
+                },
+                {
+                  "id": "arabic-rd-02",
+                  "name": "القراءة المعلوماتية"
+                },
+                {
+                  "id": "arabic-rd-03",
+                  "name": "القراءة الأدبية"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arabic-writing",
+          "name": "التعبير",
+          "nameAr": "التعبير",
+          "units": [
+            {
+              "id": "arabic-writing-u1",
+              "name": "التعبير",
+              "lessons": [
+                {
+                  "id": "arabic-w-01",
+                  "name": "أنماط التعبير الاختياري"
+                },
+                {
+                  "id": "arabic-w-02",
+                  "name": "التفصيلة الأنسب لشرح الفكرة"
+                },
+                {
+                  "id": "arabic-w-03",
+                  "name": "التفصيلة التي يجدر حذفها"
+                },
+                {
+                  "id": "arabic-w-04",
+                  "name": "نموذج الربط بين فقرتين"
+                },
+                {
+                  "id": "arabic-w-05",
+                  "name": "نمط الكناية"
+                },
+                {
+                  "id": "arabic-w-06",
+                  "name": "ثانيًا: التعبير المقالي (الكلمة الافتتاحية)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "name": "First Foreign Language — English",
+      "nameAr": "اللغة الأجنبية الأولى — الإنجليزية",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "english-course",
+          "name": "Course Units",
+          "units": [
+            {
+              "id": "english-unit-1",
+              "name": "Unit 1",
+              "lessons": [
+                {
+                  "id": "english-u1-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u1-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u1-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u1-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u1-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u1-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-2",
+              "name": "Unit 2",
+              "lessons": [
+                {
+                  "id": "english-u2-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u2-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u2-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u2-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u2-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u2-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-3",
+              "name": "Unit 3",
+              "lessons": [
+                {
+                  "id": "english-u3-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u3-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u3-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u3-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u3-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u3-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-4",
+              "name": "Unit 4",
+              "lessons": [
+                {
+                  "id": "english-u4-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u4-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u4-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u4-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u4-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u4-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-5",
+              "name": "Unit 5",
+              "lessons": [
+                {
+                  "id": "english-u5-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u5-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u5-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u5-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u5-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u5-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-6",
+              "name": "Unit 6",
+              "lessons": [
+                {
+                  "id": "english-u6-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u6-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u6-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u6-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u6-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u6-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-7",
+              "name": "Unit 7",
+              "lessons": [
+                {
+                  "id": "english-u7-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u7-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u7-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u7-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u7-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u7-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-8",
+              "name": "Unit 8",
+              "lessons": [
+                {
+                  "id": "english-u8-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u8-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u8-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u8-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u8-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u8-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-9",
+              "name": "Unit 9",
+              "lessons": [
+                {
+                  "id": "english-u9-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u9-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u9-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u9-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u9-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u9-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-10",
+              "name": "Unit 10",
+              "lessons": [
+                {
+                  "id": "english-u10-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u10-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u10-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u10-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u10-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u10-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-11",
+              "name": "Unit 11",
+              "lessons": [
+                {
+                  "id": "english-u11-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u11-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u11-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u11-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u11-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u11-writing",
+                  "name": "Writing"
+                }
+              ]
+            },
+            {
+              "id": "english-unit-12",
+              "name": "Unit 12",
+              "lessons": [
+                {
+                  "id": "english-u12-vocabulary",
+                  "name": "Vocabulary"
+                },
+                {
+                  "id": "english-u12-grammar",
+                  "name": "Grammar"
+                },
+                {
+                  "id": "english-u12-reading",
+                  "name": "Reading"
+                },
+                {
+                  "id": "english-u12-listening",
+                  "name": "Listening"
+                },
+                {
+                  "id": "english-u12-speaking",
+                  "name": "Speaking"
+                },
+                {
+                  "id": "english-u12-writing",
+                  "name": "Writing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "english-novel",
+          "name": "The Count of Monte Cristo",
+          "units": [],
+          "notes": [
+            "Chapter-level entries can be added after importing the exact 2026/2027 textbook edition."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "nameAr": "الرياضيات",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "pure-math",
+          "name": "Pure Mathematics",
+          "nameAr": "الرياضيات البحتة",
+          "units": [
+            {
+              "id": "calculus",
+              "name": "Calculus",
+              "nameAr": "التفاضل والتكامل",
+              "lessons": [
+                {
+                  "id": "calculus-01",
+                  "name": "Differentiation of Trigonometric Functions"
+                },
+                {
+                  "id": "calculus-02",
+                  "name": "Implicit and Parametric Differentiation"
+                },
+                {
+                  "id": "calculus-03",
+                  "name": "Higher Derivatives"
+                },
+                {
+                  "id": "calculus-04",
+                  "name": "Equations of the Tangent and Normal"
+                },
+                {
+                  "id": "calculus-05",
+                  "name": "Related Rates"
+                },
+                {
+                  "id": "calculus-06",
+                  "name": "Increasing and Decreasing Functions"
+                },
+                {
+                  "id": "calculus-07",
+                  "name": "Local Maximum and Minimum Values"
+                },
+                {
+                  "id": "calculus-08",
+                  "name": "Absolute Maximum and Minimum Values"
+                },
+                {
+                  "id": "calculus-09",
+                  "name": "Curve Sketching"
+                },
+                {
+                  "id": "calculus-10",
+                  "name": "Applications of Differentiation"
+                },
+                {
+                  "id": "calculus-11",
+                  "name": "Indefinite Integration"
+                },
+                {
+                  "id": "calculus-12",
+                  "name": "Integration by Substitution"
+                },
+                {
+                  "id": "calculus-13",
+                  "name": "Integration by Partial Fractions"
+                },
+                {
+                  "id": "calculus-14",
+                  "name": "Integration of Trigonometric Functions"
+                },
+                {
+                  "id": "calculus-15",
+                  "name": "Integration by Parts"
+                },
+                {
+                  "id": "calculus-16",
+                  "name": "Definite Integrals"
+                },
+                {
+                  "id": "calculus-17",
+                  "name": "Area Under a Curve"
+                },
+                {
+                  "id": "calculus-18",
+                  "name": "Area Between Two Curves"
+                },
+                {
+                  "id": "calculus-19",
+                  "name": "Volumes of Solids of Revolution"
+                },
+                {
+                  "id": "calculus-20",
+                  "name": "Applications of Definite Integration"
+                }
+              ]
+            },
+            {
+              "id": "algebra-solid-geometry",
+              "name": "Algebra and Solid Geometry",
+              "nameAr": "الجبر والهندسة الفراغية",
+              "lessons": [
+                {
+                  "id": "alg-01",
+                  "name": "Fundamental Counting Principle"
+                },
+                {
+                  "id": "alg-02",
+                  "name": "Permutations"
+                },
+                {
+                  "id": "alg-03",
+                  "name": "Combinations"
+                },
+                {
+                  "id": "alg-04",
+                  "name": "Applications of Permutations and Combinations"
+                },
+                {
+                  "id": "alg-05",
+                  "name": "Binomial Theorem for Positive Integral Powers"
+                },
+                {
+                  "id": "alg-06",
+                  "name": "General Term of a Binomial Expansion"
+                },
+                {
+                  "id": "alg-07",
+                  "name": "Middle Terms"
+                },
+                {
+                  "id": "alg-08",
+                  "name": "Applications of the Binomial Theorem"
+                },
+                {
+                  "id": "alg-09",
+                  "name": "Introduction to Complex Numbers"
+                },
+                {
+                  "id": "alg-10",
+                  "name": "Operations on Complex Numbers"
+                },
+                {
+                  "id": "alg-11",
+                  "name": "Conjugate of a Complex Number"
+                },
+                {
+                  "id": "alg-12",
+                  "name": "Modulus of a Complex Number"
+                },
+                {
+                  "id": "alg-13",
+                  "name": "Geometrical Representation of Complex Numbers"
+                },
+                {
+                  "id": "alg-14",
+                  "name": "Polar Form of Complex Numbers"
+                },
+                {
+                  "id": "alg-15",
+                  "name": "Applications of Complex Numbers"
+                },
+                {
+                  "id": "alg-16",
+                  "name": "Vectors in Space"
+                },
+                {
+                  "id": "alg-17",
+                  "name": "Components of a Vector"
+                },
+                {
+                  "id": "alg-18",
+                  "name": "Addition and Subtraction of Vectors"
+                },
+                {
+                  "id": "alg-19",
+                  "name": "Scalar Multiplication"
+                },
+                {
+                  "id": "alg-20",
+                  "name": "Dot Product"
+                },
+                {
+                  "id": "alg-21",
+                  "name": "Applications of Vectors"
+                },
+                {
+                  "id": "alg-22",
+                  "name": "Coordinates in Space"
+                },
+                {
+                  "id": "alg-23",
+                  "name": "Equation of a Plane"
+                },
+                {
+                  "id": "alg-24",
+                  "name": "Equation of a Straight Line in Space"
+                },
+                {
+                  "id": "alg-25",
+                  "name": "Distance Between Points"
+                },
+                {
+                  "id": "alg-26",
+                  "name": "Distance Between a Point and a Plane"
+                },
+                {
+                  "id": "alg-27",
+                  "name": "Angle Between Two Planes"
+                },
+                {
+                  "id": "alg-28",
+                  "name": "Angle Between a Line and a Plane"
+                },
+                {
+                  "id": "alg-29",
+                  "name": "Applications of Solid Geometry"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "applied-math",
+          "name": "Applied Mathematics",
+          "nameAr": "الرياضيات التطبيقية",
+          "units": [
+            {
+              "id": "statics",
+              "name": "Statics",
+              "nameAr": "الاستاتيكا",
+              "lessons": [
+                {
+                  "id": "statics-01",
+                  "name": "Forces"
+                },
+                {
+                  "id": "statics-02",
+                  "name": "Resultant of Two Forces"
+                },
+                {
+                  "id": "statics-03",
+                  "name": "Resultant of Several Forces"
+                },
+                {
+                  "id": "statics-04",
+                  "name": "Resolution of Forces"
+                },
+                {
+                  "id": "statics-05",
+                  "name": "Equilibrium of a Particle"
+                },
+                {
+                  "id": "statics-06",
+                  "name": "Moment of a Force"
+                },
+                {
+                  "id": "statics-07",
+                  "name": "Moments About a Point"
+                },
+                {
+                  "id": "statics-08",
+                  "name": "Couples"
+                },
+                {
+                  "id": "statics-09",
+                  "name": "Resultant of Parallel Forces"
+                },
+                {
+                  "id": "statics-10",
+                  "name": "Equilibrium of a Rigid Body"
+                },
+                {
+                  "id": "statics-11",
+                  "name": "Friction"
+                },
+                {
+                  "id": "statics-12",
+                  "name": "Limiting Friction"
+                },
+                {
+                  "id": "statics-13",
+                  "name": "Coefficient of Friction"
+                },
+                {
+                  "id": "statics-14",
+                  "name": "Applications of Friction"
+                },
+                {
+                  "id": "statics-15",
+                  "name": "Equilibrium on Inclined Planes"
+                },
+                {
+                  "id": "statics-16",
+                  "name": "Equilibrium of Connected Bodies"
+                },
+                {
+                  "id": "statics-17",
+                  "name": "Applications of Statics"
+                }
+              ]
+            },
+            {
+              "id": "dynamics",
+              "name": "Dynamics",
+              "nameAr": "الديناميكا",
+              "lessons": [
+                {
+                  "id": "dynamics-01",
+                  "name": "Motion"
+                },
+                {
+                  "id": "dynamics-02",
+                  "name": "Displacement and Velocity"
+                },
+                {
+                  "id": "dynamics-03",
+                  "name": "Acceleration"
+                },
+                {
+                  "id": "dynamics-04",
+                  "name": "Equations of Motion"
+                },
+                {
+                  "id": "dynamics-05",
+                  "name": "Graphical Representation of Motion"
+                },
+                {
+                  "id": "dynamics-06",
+                  "name": "Newton's First Law"
+                },
+                {
+                  "id": "dynamics-07",
+                  "name": "Newton's Second Law"
+                },
+                {
+                  "id": "dynamics-08",
+                  "name": "Newton's Third Law"
+                },
+                {
+                  "id": "dynamics-09",
+                  "name": "Applications of Newton's Laws"
+                },
+                {
+                  "id": "dynamics-10",
+                  "name": "Vertical Motion"
+                },
+                {
+                  "id": "dynamics-11",
+                  "name": "Free Fall"
+                },
+                {
+                  "id": "dynamics-12",
+                  "name": "Motion Under Gravity"
+                },
+                {
+                  "id": "dynamics-13",
+                  "name": "Projectile Motion"
+                },
+                {
+                  "id": "dynamics-14",
+                  "name": "Horizontal Projection"
+                },
+                {
+                  "id": "dynamics-15",
+                  "name": "Oblique Projection"
+                },
+                {
+                  "id": "dynamics-16",
+                  "name": "Applications of Projectile Motion"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "nameAr": "الفيزياء",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "physics-electricity",
+          "name": "Electricity and Electromagnetism",
+          "units": [
+            {
+              "id": "physics-ch1",
+              "name": "Electric Current",
+              "lessons": [
+                {
+                  "id": "physics-01",
+                  "name": "Electric Charge and Electric Current"
+                },
+                {
+                  "id": "physics-02",
+                  "name": "Potential Difference"
+                },
+                {
+                  "id": "physics-03",
+                  "name": "Resistance and Ohm's Law"
+                },
+                {
+                  "id": "physics-04",
+                  "name": "Resistivity and Factors Affecting Resistance"
+                },
+                {
+                  "id": "physics-05",
+                  "name": "Series and Parallel Circuits"
+                },
+                {
+                  "id": "physics-06",
+                  "name": "Electrical Energy and Power"
+                },
+                {
+                  "id": "physics-07",
+                  "name": "Cells and Batteries"
+                },
+                {
+                  "id": "physics-08",
+                  "name": "Internal Resistance"
+                },
+                {
+                  "id": "physics-09",
+                  "name": "Kirchhoff's Laws"
+                },
+                {
+                  "id": "physics-10",
+                  "name": "Applications of Electric Circuits"
+                }
+              ]
+            },
+            {
+              "id": "physics-ch2",
+              "name": "Magnetic Effect of Electric Current",
+              "lessons": [
+                {
+                  "id": "physics-11",
+                  "name": "Magnetic Field"
+                },
+                {
+                  "id": "physics-12",
+                  "name": "Magnetic Field Around a Straight Current-Carrying Wire"
+                },
+                {
+                  "id": "physics-13",
+                  "name": "Magnetic Field of a Circular Current"
+                },
+                {
+                  "id": "physics-14",
+                  "name": "Magnetic Field of a Solenoid"
+                },
+                {
+                  "id": "physics-15",
+                  "name": "Force on a Current-Carrying Conductor"
+                },
+                {
+                  "id": "physics-16",
+                  "name": "Force Between Parallel Current-Carrying Wires"
+                },
+                {
+                  "id": "physics-17",
+                  "name": "Torque on a Current-Carrying Coil"
+                },
+                {
+                  "id": "physics-18",
+                  "name": "Moving-Coil Galvanometer"
+                },
+                {
+                  "id": "physics-19",
+                  "name": "Conversion of a Galvanometer"
+                }
+              ]
+            },
+            {
+              "id": "physics-ch3",
+              "name": "Electromagnetic Induction",
+              "lessons": [
+                {
+                  "id": "physics-20",
+                  "name": "Electromagnetic Induction"
+                },
+                {
+                  "id": "physics-21",
+                  "name": "Magnetic Flux"
+                },
+                {
+                  "id": "physics-22",
+                  "name": "Faraday's Law"
+                },
+                {
+                  "id": "physics-23",
+                  "name": "Lenz's Law"
+                },
+                {
+                  "id": "physics-24",
+                  "name": "Motional EMF"
+                },
+                {
+                  "id": "physics-25",
+                  "name": "Self-Induction"
+                },
+                {
+                  "id": "physics-26",
+                  "name": "Mutual Induction"
+                },
+                {
+                  "id": "physics-27",
+                  "name": "Transformers"
+                },
+                {
+                  "id": "physics-28",
+                  "name": "Generators"
+                }
+              ]
+            },
+            {
+              "id": "physics-ch4",
+              "name": "Alternating Current",
+              "lessons": [
+                {
+                  "id": "physics-29",
+                  "name": "Alternating Current"
+                },
+                {
+                  "id": "physics-30",
+                  "name": "AC Voltage and Current"
+                },
+                {
+                  "id": "physics-31",
+                  "name": "Resistance in AC Circuits"
+                },
+                {
+                  "id": "physics-32",
+                  "name": "Inductance in AC Circuits"
+                },
+                {
+                  "id": "physics-33",
+                  "name": "Capacitance in AC Circuits"
+                },
+                {
+                  "id": "physics-34",
+                  "name": "Reactance"
+                },
+                {
+                  "id": "physics-35",
+                  "name": "Impedance"
+                },
+                {
+                  "id": "physics-36",
+                  "name": "Phase Difference"
+                },
+                {
+                  "id": "physics-37",
+                  "name": "Resonance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "physics-modern",
+          "name": "Modern Physics",
+          "units": [
+            {
+              "id": "physics-ch5",
+              "name": "Wave-Particle Duality",
+              "lessons": [
+                {
+                  "id": "physics-38",
+                  "name": "Blackbody Radiation"
+                },
+                {
+                  "id": "physics-39",
+                  "name": "Planck's Quantum Theory"
+                },
+                {
+                  "id": "physics-40",
+                  "name": "Photoelectric Effect"
+                },
+                {
+                  "id": "physics-41",
+                  "name": "Photons"
+                },
+                {
+                  "id": "physics-42",
+                  "name": "Matter Waves"
+                },
+                {
+                  "id": "physics-43",
+                  "name": "de Broglie Hypothesis"
+                }
+              ]
+            },
+            {
+              "id": "physics-ch6",
+              "name": "Atomic Spectra",
+              "lessons": [
+                {
+                  "id": "physics-44",
+                  "name": "Atomic Spectra"
+                },
+                {
+                  "id": "physics-45",
+                  "name": "Rutherford Model"
+                },
+                {
+                  "id": "physics-46",
+                  "name": "Bohr Model"
+                },
+                {
+                  "id": "physics-47",
+                  "name": "Energy Levels"
+                },
+                {
+                  "id": "physics-48",
+                  "name": "Hydrogen Spectrum"
+                },
+                {
+                  "id": "physics-49",
+                  "name": "Emission and Absorption Spectra"
+                }
+              ]
+            },
+            {
+              "id": "physics-ch7",
+              "name": "Lasers",
+              "lessons": [
+                {
+                  "id": "physics-50",
+                  "name": "Laser Principles"
+                },
+                {
+                  "id": "physics-51",
+                  "name": "Spontaneous and Stimulated Emission"
+                },
+                {
+                  "id": "physics-52",
+                  "name": "Population Inversion"
+                },
+                {
+                  "id": "physics-53",
+                  "name": "Laser Characteristics"
+                },
+                {
+                  "id": "physics-54",
+                  "name": "Types and Applications of Lasers"
+                }
+              ]
+            },
+            {
+              "id": "physics-ch8",
+              "name": "Modern Electronics",
+              "lessons": [
+                {
+                  "id": "physics-55",
+                  "name": "Semiconductors"
+                },
+                {
+                  "id": "physics-56",
+                  "name": "Intrinsic and Extrinsic Semiconductors"
+                },
+                {
+                  "id": "physics-57",
+                  "name": "P-Type and N-Type Semiconductors"
+                },
+                {
+                  "id": "physics-58",
+                  "name": "P-N Junction and Diodes"
+                },
+                {
+                  "id": "physics-59",
+                  "name": "Transistors"
+                },
+                {
+                  "id": "physics-60",
+                  "name": "Applications of Modern Electronics"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "nameAr": "الكيمياء",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "chemistry-general",
+          "name": "General Chemistry",
+          "units": [
+            {
+              "id": "chem-ch1",
+              "name": "Transition Elements",
+              "lessons": [
+                {
+                  "id": "chem-01",
+                  "name": "Introduction to Transition Elements"
+                },
+                {
+                  "id": "chem-02",
+                  "name": "Electronic Configuration and Oxidation States"
+                },
+                {
+                  "id": "chem-03",
+                  "name": "General Properties of Transition Elements"
+                },
+                {
+                  "id": "chem-04",
+                  "name": "Iron and Its Compounds"
+                },
+                {
+                  "id": "chem-05",
+                  "name": "Extraction of Iron"
+                },
+                {
+                  "id": "chem-06",
+                  "name": "Chromium and Manganese"
+                },
+                {
+                  "id": "chem-07",
+                  "name": "Complex Compounds and Catalytic Properties"
+                },
+                {
+                  "id": "chem-08",
+                  "name": "Alloys and Applications"
+                }
+              ]
+            },
+            {
+              "id": "chem-ch2",
+              "name": "Chemical Analysis",
+              "lessons": [
+                {
+                  "id": "chem-09",
+                  "name": "Introduction to Chemical Analysis"
+                },
+                {
+                  "id": "chem-10",
+                  "name": "Qualitative Analysis"
+                },
+                {
+                  "id": "chem-11",
+                  "name": "Analysis of Cations"
+                },
+                {
+                  "id": "chem-12",
+                  "name": "Analysis of Anions"
+                },
+                {
+                  "id": "chem-13",
+                  "name": "Chemical Tests"
+                },
+                {
+                  "id": "chem-14",
+                  "name": "Quantitative Analysis"
+                },
+                {
+                  "id": "chem-15",
+                  "name": "Volumetric Analysis and Titration"
+                },
+                {
+                  "id": "chem-16",
+                  "name": "Concentration and Purity Calculations"
+                }
+              ]
+            },
+            {
+              "id": "chem-ch3",
+              "name": "Chemical Equilibrium",
+              "lessons": [
+                {
+                  "id": "chem-17",
+                  "name": "Reaction Rate"
+                },
+                {
+                  "id": "chem-18",
+                  "name": "Factors Affecting Reaction Rate"
+                },
+                {
+                  "id": "chem-19",
+                  "name": "Chemical Equilibrium"
+                },
+                {
+                  "id": "chem-20",
+                  "name": "Equilibrium Constant"
+                },
+                {
+                  "id": "chem-21",
+                  "name": "Le Chatelier's Principle"
+                },
+                {
+                  "id": "chem-22",
+                  "name": "Ionic Equilibrium"
+                },
+                {
+                  "id": "chem-23",
+                  "name": "Solubility Product"
+                },
+                {
+                  "id": "chem-24",
+                  "name": "Acids and Bases"
+                }
+              ]
+            },
+            {
+              "id": "chem-ch4",
+              "name": "Electrochemistry",
+              "lessons": [
+                {
+                  "id": "chem-25",
+                  "name": "Electrochemical Cells"
+                },
+                {
+                  "id": "chem-26",
+                  "name": "Galvanic Cells"
+                },
+                {
+                  "id": "chem-27",
+                  "name": "Electrode Potential and EMF"
+                },
+                {
+                  "id": "chem-28",
+                  "name": "Electrochemical Series"
+                },
+                {
+                  "id": "chem-29",
+                  "name": "Batteries"
+                },
+                {
+                  "id": "chem-30",
+                  "name": "Electrolysis"
+                },
+                {
+                  "id": "chem-31",
+                  "name": "Faraday's Laws"
+                },
+                {
+                  "id": "chem-32",
+                  "name": "Corrosion and Cathodic Protection"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chemistry-organic",
+          "name": "Organic Chemistry",
+          "units": [
+            {
+              "id": "chem-ch5",
+              "name": "Organic Chemistry",
+              "lessons": [
+                {
+                  "id": "chem-33",
+                  "name": "Introduction to Organic Chemistry"
+                },
+                {
+                  "id": "chem-34",
+                  "name": "Hydrocarbons"
+                },
+                {
+                  "id": "chem-35",
+                  "name": "Alkanes"
+                },
+                {
+                  "id": "chem-36",
+                  "name": "Alkenes"
+                },
+                {
+                  "id": "chem-37",
+                  "name": "Alkynes"
+                },
+                {
+                  "id": "chem-38",
+                  "name": "Aromatic Hydrocarbons"
+                },
+                {
+                  "id": "chem-39",
+                  "name": "Alcohols"
+                },
+                {
+                  "id": "chem-40",
+                  "name": "Phenols"
+                },
+                {
+                  "id": "chem-41",
+                  "name": "Aldehydes and Ketones"
+                },
+                {
+                  "id": "chem-42",
+                  "name": "Carboxylic Acids"
+                },
+                {
+                  "id": "chem-43",
+                  "name": "Esters"
+                },
+                {
+                  "id": "chem-44",
+                  "name": "Organic Reactions"
+                },
+                {
+                  "id": "chem-45",
+                  "name": "Isomerism"
+                },
+                {
+                  "id": "chem-46",
+                  "name": "Applications of Organic Compounds"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
